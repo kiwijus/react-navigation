@@ -1,5 +1,5 @@
 import React from 'react';
-import { Animated, StyleSheet } from 'react-native';
+import { Animated, SafeAreaView, StyleSheet } from 'react-native';
 import { TabBar } from 'react-native-tab-view';
 import TabBarIcon from './TabBarIcon';
 
@@ -102,13 +102,15 @@ export default class TabBarTop extends React.PureComponent {
     const props = this.props;
 
     return (
-      <TabBar
-        {...props}
-        onTabPress={this._handleOnPress}
-        jumpToIndex={() => {}}
-        renderIcon={this._renderIcon}
-        renderLabel={this._renderLabel}
-      />
+      <SafeAreaView>
+        <TabBar
+          {...props}
+          onTabPress={this._handleOnPress}
+          jumpToIndex={() => { }}
+          renderIcon={this._renderIcon}
+          renderLabel={this._renderLabel}
+        />
+      </SafeAreaView>
     );
   }
 }
