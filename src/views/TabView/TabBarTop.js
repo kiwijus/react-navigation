@@ -1,6 +1,8 @@
 import React from 'react';
-import { Animated, SafeAreaView, StyleSheet } from 'react-native';
+import { Animated, StyleSheet } from 'react-native';
 import { TabBar } from 'react-native-tab-view';
+import SafeAreaView from 'react-native-safe-area-view';
+
 import TabBarIcon from './TabBarIcon';
 
 export default class TabBarTop extends React.PureComponent {
